@@ -9,20 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var course_service_1 = require("./course.service");
-var CoursesComponent = (function () {
-    function CoursesComponent(courseService) {
-        this.title = 'Courses Available';
-        this.courses = courseService.getCourses();
+var author_service_1 = require("./author.service");
+var AuthorComponent = (function () {
+    function AuthorComponent(authorService) {
+        this.title = 'Course Authors';
+        this.authors = authorService.getAuthors();
     }
-    return CoursesComponent;
+    return AuthorComponent;
 }());
-CoursesComponent = __decorate([
+AuthorComponent = __decorate([
     core_1.Component({
-        selector: 'courses',
-        template: "\n    <h2>Courses</h2>\n    <h3>{{title}}</h3>\n    <input type=\"text\" autoGrow />\n    <ul>\n      <li *ngFor=\"let course of courses\">\n      {{ course }}\n      </li>\n    </ul>\n    "
+        selector: 'authors',
+        template: "\n    <h2>Authors</h2>\n    <h3>{{title}}</h3>\n    <ul>\n      <li *ngFor=\"let author of authors\">\n      {{author}}\n      </li>\n    </ul>\n  "
     }),
-    __metadata("design:paramtypes", [course_service_1.CourseService])
-], CoursesComponent);
-exports.CoursesComponent = CoursesComponent;
-//# sourceMappingURL=courses.component.js.map
+    __metadata("design:paramtypes", [author_service_1.AuthorService])
+], AuthorComponent);
+exports.AuthorComponent = AuthorComponent;
+//# sourceMappingURL=author.component.js.map

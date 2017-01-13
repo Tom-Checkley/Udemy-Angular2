@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import { CourseService } from './course.service';
 
 @Component({
@@ -6,18 +7,18 @@ import { CourseService } from './course.service';
   template: `
     <h2>Courses</h2>
     <h3>{{title}}</h3>
+    <input type="text" autoGrow />
     <ul>
       <li *ngFor="let course of courses">
       {{ course }}
       </li>
     </ul>
-    `,
-  providers: [ CourseService ]
+    `
 })
 
 export class CoursesComponent {
   title: string = 'Courses Available';
-  courses;
+  courses: string[];
 
   constructor(courseService: CourseService) {
     this.courses = courseService.getCourses();

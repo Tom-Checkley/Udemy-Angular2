@@ -6,16 +6,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var AppComponent = (function () {
-    function AppComponent() {
+var AuthorService = (function () {
+    function AuthorService() {
     }
-    return AppComponent;
+    AuthorService.prototype.getAuthors = function () {
+        return ['Author1', 'Author2', 'Author3'];
+    };
+    return AuthorService;
 }());
-AppComponent = __decorate([
-    core_1.Component({
-        selector: 'my-app',
-        template: "\n    <h1>Hello Angular</h1>\n    <courses></courses>\n    <authors></authors>\n  "
-    })
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+AuthorService = __decorate([
+    core_1.Injectable()
+], AuthorService);
+exports.AuthorService = AuthorService;
+//# sourceMappingURL=author.service.js.map
