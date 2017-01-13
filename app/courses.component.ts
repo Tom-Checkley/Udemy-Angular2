@@ -8,6 +8,7 @@ import { CourseService } from './course.service';
     <h2>Courses</h2>
     <h3>{{title}}</h3>
     <input type="text" autoGrow />
+
     <ul>
       <li *ngFor="let course of courses">
       {{ course }}

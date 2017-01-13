@@ -10,6 +10,7 @@ var platform_browser_1 = require("@angular/platform-browser");
 var app_component_1 = require("./app.component");
 var courses_component_1 = require("./courses.component");
 var author_component_1 = require("./author.component");
+var favourite_component_1 = require("./favourite.component");
 var course_service_1 = require("./course.service");
 var author_service_1 = require("./author.service");
 var auto_grow_directive_1 = require("./auto-grow.directive");
@@ -25,6 +26,7 @@ AppModule = __decorate([
             app_component_1.AppComponent,
             courses_component_1.CoursesComponent,
             author_component_1.AuthorComponent,
+            favourite_component_1.FavouriteComponent,
             auto_grow_directive_1.AutoGrowDirective
         ],
         providers: [

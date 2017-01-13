@@ -4,6 +4,7 @@ import { BrowserModule }      from '@angular/platform-browser';
 import { AppComponent }       from './app.component';
 import { CoursesComponent }   from './courses.component';
 import { AuthorComponent }    from './author.component';
+import { FavouriteComponent } from './favourite.component';
 
 import { CourseService }      from './course.service';
 import { AuthorService }      from './author.service';
@@ -16,6 +17,7 @@ import { AutoGrowDirective }  from './auto-grow.directive';
                   AppComponent,
                   CoursesComponent,
                   AuthorComponent,
+                  FavouriteComponent,
                   AutoGrowDirective
                 ],
   providers: [

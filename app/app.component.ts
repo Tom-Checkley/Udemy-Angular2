@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   template: `
     <h1>Hello Angular</h1>
     <courses></courses>
+    <favourite></favourite>
     <authors></authors>
   `
 })

@@ -6,16 +6,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var AppComponent = (function () {
-    function AppComponent() {
+var FavouriteComponent = (function () {
+    function FavouriteComponent() {
+        this.isFavourite = false;
     }
-    return AppComponent;
+    FavouriteComponent.prototype.onClick = function () {
+        this.isFavourite = !this.isFavourite;
+    };
+    return FavouriteComponent;
 }());
-AppComponent = __decorate([
+FavouriteComponent = __decorate([
     core_1.Component({
-        selector: 'my-app',
-        template: "\n    <h1>Hello Angular</h1>\n    <courses></courses>\n    <favourite></favourite>\n    <authors></authors>\n  "
+        selector: 'favourite',
+        template: "\n    <i\n      class=\"glyphicon\"\n      [class.glyphicon-star-empty]=\"!isFavourite\"\n      [class.glyphicon-star]=\"isFavourite\"\n      (click)=\"onClick()\">\n    </i>\n  "
     })
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+], FavouriteComponent);
+exports.FavouriteComponent = FavouriteComponent;
+//# sourceMappingURL=favourite.component.js.map
