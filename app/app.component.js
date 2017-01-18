@@ -8,13 +8,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
+        this.post = {
+            title: 'Title',
+            isFavourite: true
+        };
     }
+    AppComponent.prototype.onFavouriteChange = function ($event) {
+        console.log($event);
+    };
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "\n    <h1>Hello Angular</h1>\n    <courses></courses>\n    <favourite></favourite>\n    <authors></authors>\n  "
+        template: "\n    <h1>Hello Angular</h1>\n    <courses></courses>\n    <favourite [isFavourite]=\"post.isFavourite\" (change)=\"onFavouriteChange($event)\"></favourite>\n    <authors></authors>\n  "
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
