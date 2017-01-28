@@ -10,9 +10,18 @@ var AppComponent = (function () {
     function AppComponent() {
         this.post = {
             title: 'Title',
-            isFavourite: true
+            isFavourite: true,
+            votes: 10,
+            myVote: 0,
+        };
+        this.tweet = {
+            totalLikes: 9,
+            iLike: false
         };
     }
+    AppComponent.prototype.onVote = function ($event) {
+        console.log($event);
+    };
     AppComponent.prototype.onFavouriteChange = function ($event) {
         console.log($event);
     };
@@ -21,7 +30,7 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "\n    <h1>Hello Angular</h1>\n    <courses></courses>\n    <favourite [isFavourite]=\"post.isFavourite\" (change)=\"onFavouriteChange($event)\"></favourite>\n    <authors></authors>\n  "
+        template: "\n    <h1>Hello Angular</h1>\n    <accordian title=\"Courses\">\n      <binding-buttons></binding-buttons>\n      <courses></courses>\n    </accordian>\n    <accordian title=\"Authors\">\n      <authors></authors>\n    </accordian>\n\n    <div class=\"col-md-4\">\n      <switch></switch>\n      <div style=\"display: flex; justify-content: space-around; align-items: center;\">\n        <likes\n          [totalLikes]=\"tweet.totalLikes\"\n          [iLike]=\"tweet.iLike\" >\n        </likes>\n        <favourite\n          [isFavourite]=\"post.isFavourite\"\n          (change)=\"onFavouriteChange($event)\">\n        </favourite>\n        <votes\n          [votes]=\"post.votes\"\n          [myVote]=\"post.myVote\"\n          (vote)=\"onVote($event)\"\n        ></votes>\n      </div>\n    </div>\n\n  "
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;

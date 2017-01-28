@@ -31,7 +31,8 @@ __decorate([
 FavouriteComponent = __decorate([
     core_1.Component({
         selector: 'favourite',
-        template: "\n    <i\n      class=\"glyphicon\"\n      [class.glyphicon-star-empty]=\"!isFavourite\"\n      [class.glyphicon-star]=\"isFavourite\"\n      (click)=\"onClick()\">\n    </i>\n  "
+        template: "\n    <i\n      class=\"glyphicon\"\n      [class.glyphicon-star-empty]=\"!isFavourite\"\n      [class.glyphicon-star]=\"isFavourite\"\n      (click)=\"onClick()\">\n    </i>\n  ",
+        styles: ["\n    .glyphicon {\n      cursor: pointer;\n    }\n\n    .glyphicon-star-empty {\n      color: #ccc;\n    }\n\n    .glyphicon-star {\n      color: orange;\n    }\n  "]
     })
 ], FavouriteComponent);
 exports.FavouriteComponent = FavouriteComponent;

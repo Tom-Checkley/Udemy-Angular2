@@ -9,7 +9,20 @@ import { Component, Input, EventEmitter, Output } from '@angular/core';
       [class.glyphicon-star]="isFavourite"
       (click)="onClick()">
     </i>
-  `
+  `,
+  styles: [`
+    .glyphicon {
+      cursor: pointer;
+    }
+
+    .glyphicon-star-empty {
+      color: #ccc;
+    }
+
+    .glyphicon-star {
+      color: orange;
+    }
+  `]
 })
 export class FavouriteComponent {
   @Input() isFavourite = false;

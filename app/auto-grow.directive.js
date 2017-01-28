@@ -15,7 +15,7 @@ var AutoGrowDirective = (function () {
         this.renderer = renderer;
     }
     AutoGrowDirective.prototype.onFocus = function () {
-        this.renderer.setElementStyle(this.el.nativeElement, 'width', '200');
+        this.renderer.setElementStyle(this.el.nativeElement, 'width', '100%');
     };
     AutoGrowDirective.prototype.onBlur = function () {
         this.renderer.setElementStyle(this.el.nativeElement, 'width', '120');
